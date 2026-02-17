@@ -2,8 +2,8 @@ qemu-system-@CMAKE_SYSTEM_PROCESSOR@ \
   -machine q35 \
   -cpu qemu64 \
   -m 512 \
-  -drive if=pflash,format=raw,readonly=on,file=@LXIV_OVMF_CODE_FD@ \
-  -drive if=pflash,format=raw,file=@LXIV_OVMF_VARS_FD@ \
+  -drive if=pflash,format=raw,readonly=on,file=@TITIL_OVMF_CODE_FD@ \
+  -drive if=pflash,format=raw,file=@TITIL_OVMF_VARS_FD@ \
   -drive file=fat:rw:@CMAKE_CURRENT_BINARY_DIR@/efitest,format=raw \
   -net none \
   -vnc 127.0.0.1:0
